@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>flex responsive</title>
+</head>
+<body>
+
+    <div class="padre">
+        <header class="header">
+            
+                    <div class="menu">
+                        <div class="logo"></div>
+                        <div class="nav"></div>
+                        <div class="social"></div>
+
+                    </div>
+
+                        <div class="text-h1">
+                                    <h1></h1>
+                        </div>
+                  
+
+        </header>
+   
+                            
+
+        <main class="main">
+                    <div class="main_section">
+                        <article class="main_section-article"></article>
+                        <article class="main_section-article"></article>
+                        <article class="main_section-article"></article>
+                        <article class="main_section-article"></article>
+                        <nav class="navegation"></nav>
+                
+                    </div>            
+
+                     <aside class="aside">
+                        <div class="aside_publicidad"></div>
+                        <div class="aside_publicidad"></div>
+                     </aside>
+
+        </main>    
+        
+        <footer class="footer">
+                     <nav class="pie">
+
+                     </nav>
+        </footer>
+
+    </div>                            
+     
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+css
+
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+}
+
+.padre{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+    .header{
+        background: #000;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: #630000;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            
+            
+        }
+
+                .logo{
+                background: #091353;
+                flex: 1 1 auto;
+                    
+                }
+
+                .nav{
+                background: #091353;
+                flex: 5 1 auto;
+                }
+                .social{
+                background: #091353;
+                flex: 1 1 auto;
+                }
+
+        .text-h1{
+            background: #AA14F0;
+        }        
+                .text-h1 h1{
+                    background: #F0A500;
+                }
+     
+                
+
+    .main{
+        background: #000;
+        display: flex;
+        flex-flow: row nowrap;
+        
+        
+
+    }
+        .main_section{
+            background: #3D0000;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+            
+        }
+                .main_section-article{
+                    background: #FF4C29;
+                    flex: 1 1 40%;
+                    
+                }
+
+                .navegation{
+                    background: #9D84B7;
+                    flex: 1 1 100%;
+                }   
+
+
+
+         .aside{
+             background: #55B3B1;
+             flex: 1 1 auto;
+         }       
+
+                .aside_publicidad{
+                    background: #3E7C17;
+
+                }
+
+
+
+
+
+    .footer{
+    background:#000;
+    display: flex;
+    justify-content: center;
+    }
+        .pie{
+            background: #966C3B;
+            width: 300px;
+        }
+
+
+
+        @media  all and (max-width:800px) {
+            .main{
+                flex-direction: column;
+            }
+
+            .menu{
+                flex-direction: column;
+                height: auto;
+
+            }
+
+            .aside{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+
+
+
+        @media all and (max-width:600px){
+            .main_section{
+                flex-direction: column;
+
+            }
+        }
+
+        @media all and (max width:400px) {
+            .aside{
+                flex-direction: column;
+
+            }
+        }
